@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<p>Amazon delivery calculator</p>
+<br>
+<input placeholder="Enter the cost of your order" class="input" onkeydown="
+if (event.key === 'Enter') {
+    calculateTotal()
+}
+">
+<button id="btn" onclick="calculateTotal()" >Calculate</button>
+<p class="total-cost"></p>
+
+
+
+<script>
+ function calculateTotal (){
+     const inputTag = document.querySelector('.input')
+     let cost = +inputTag.value
+     console.log(cost)
+     // inputTag.addEventListener('keydown', (e) =>{
+     //     console.log(e.key)
+     // })
+     if (isNaN(cost)){
+         document.querySelector('.total-cost').innerHTML = 'Please enter a number'
+     } else  {if(cost < 40){
+           cost = cost + 10
+     }
+     document.querySelector('.total-cost').innerHTML = `Total cost is $${cost}.`
+ }}
+
+// console.log(event.keyCode)
+
+
+</script>
+</body>
+</html>
