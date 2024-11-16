@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input class="input" placeholder="Enter your name" onkeydown="
+ if(event.key==='Shift'){
+   simon()
+ }
+ ">
+ <button onclick="simon()">Send</button>
+<p class="info"></p>
+<script>
+  function simon (){
+    const input = document.querySelector('.input')
+   let input2= input.value
+    document.querySelector('.info').innerHTML= `Your name is: ${input2}`
+  }
+
+
+</script>
+</body>
+</html>

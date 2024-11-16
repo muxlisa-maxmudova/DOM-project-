@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="1" onclick="click() ">
+    Jami qiymat korsatish
+</button>
+
+<button class="1" onclick="click() ">
+    Savantchaga qoshish
+</button>
+
+<button class="1" onclick="click() ">
+    +2
+</button>
+
+<button class="1" onclick="click() ">
+    +3
+</button>
+
+<button class="1" onclick="click()">
+    Savatchani boshatish
+</button>
+ <p class="total"> </p>
+<script>
+    let jamiqiymat = 0;
+    const total = document.querySelector('.total')
+    const button = document.querySelectorAll("button")
+    function click(){
+     if( button.innerHTML === 'Jami qiymat korsatish' ){
+       total.innerHTML=`Jami qiymat: ${jamiqiymat}`
+        }
+        if (button.innerHTML === 'Savantchaga qoshish'){
+            jamiqiymat++
+        } else if (button.innerHTML === '+2'){
+            jamiqiymat+=2
+        } else if (button.innerHTML === '+3'){
+            jamiqiymat+=3
+        } else if(button.innerHTML === 'Savatchani boshatish'){
+            jamiqiymat = 0
+            alert(`jamiqiymat: ${jamiqiymat}`)
+        } else if( button.innerHTML === 'Jami qiymat korsatish' ){
+           total.innerHTML=`Jami qiymat: ${jamiqiymat}`
+        } console.log(jamiqiymat)
+
+
+    }
+ //click()
+
+</script>
+</body>
+</html>
